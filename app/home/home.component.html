@@ -5,26 +5,41 @@
 
   <md-card>
     <h2>About Me</h2>
-    <div style="text-align:center;">
-      <div class="github-card" data-github="domfarolino" data-width="400" data-height="" data-theme="medium"></div>
-    </div>
-    <p>I am currently a junior studying computer science at the University of Cincinnati.
+    <p>I am a 3rd year computer science major at the University of Cincinnati currently pursuing my Masters degree.
       I have a passion for building applications other people can use to connect with each other.
-      I'm a big advocate for the future of web apps and want to do my part in getting the web
-      to do everything that native can on every platform. I usually split my working time between building and
-      experimenting with <a href="https://developers.google.com/web/progressive-web-apps">Progressive Web Apps</a>,
-      as well as solving algorithms on <a href="https://code.google.com/codejam">Google Code Jam</a> and <a href="https://leetcode.com/problemset/algorithms/">other</a> <a href="http://www.spoj.com/">online judges</a>
-      
+      I'm a big advocate for the future of web apps and want to do what I can to help the web
+      do everything native can, on every platform. I usually split my working time developing for the web, and studying and solving algorithms.
     </p>
-      
-    <p>I like to play the piano and run in my free time. On opposite day I'm a right-handed spider enthusiast and future chemist.
+    
+    <p>
+      When developing for the web I focus on building and experimenting with
+      <a href="https://developers.google.com/web/progressive-web-apps" target="_blank">Progressive Web Apps</a> and
+      learning RxJS and Angular 2. I'm fairly involved with the Angular community
+      and spend a good bit of time in the <a href="https://gitter.im/angular/angular" target="_blank">Gitter</a> chat room.
     </p>
+    
+    <p>  
+      I like to study algorithms & discrete mathematics, and spend a lot of time solving problems on online judges
+      such as:
+    </p>
+    <ul>
+      <li><a href="http://www.spoj.com/" target="_blank">SPOJ</a></li>
+      <li><a href="https://leetcode.com/problemset/algorithms/" target="_blank">Leetcode</a></li>
+      <li><a href="https://code.google.com/codejam" target="_blank">Google Code Jam</a></li>
+    </ul>
+    Problem solving can be, addicting, and if I find a problem whose answer consists of some neat symmetry I might
+    write a short <a href="https://chinocode.com" target="_blank">post</a> about it.
       
+    <p>I like to play the piano and run in my free time. On opposite day I'm a right-handed spider enthusiast and future chemist.</p>
+
   </md-card>
   
   <md-card>
     <h2>Recent Projects</h2>
     <p>Here's a condensed list of some of my GitHub repositories</p>
+    <div style="text-align:center; width:100% !important; overflow:scroll;">
+      <div class="github-card" data-github="domfarolino" data-width="400" data-height="" data-theme="medium"></div>
+    </div>
     <div style="text-align:center;">
       <div *ngFor="let repo of repos" style="height:200px !important; overflow: hidden;">
         <div class="github-card" [attr.data-github]="repo" data-width="100%" data-height="" data-theme="default"></div>
@@ -46,7 +61,7 @@
       </button>
     </a>
 
-    <a href="https://domfarolino.github.io" target="_blank" class="inherit">
+    <a href="https://chinocode.com" target="_blank" class="inherit">
       <button md-raised-button color="primary">
         Blog
       </button>

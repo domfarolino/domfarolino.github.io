@@ -3,19 +3,23 @@
     <div id="user-profile">
       <img [attr.src]="profile_picture">
       <p>{{name}}</p>
+      <p>{{email}}</p>
     </div>
     
     <md-nav-list (click)="sidenav.close()">
       
       <a md-list-item [routerLink]="['/']">
+        <md-icon md-list-icon class="secondary">home</md-icon>
         <span md-line>Home</span>
         <span md-line class="secondary">Take me home!</span>
       </a>
       <a md-list-item (click)="goToBlog()">
+        <md-icon md-list-icon class="secondary">edit</md-icon>
         <span md-line>Blog</span>
-        <span md-line class="secondary">Checkout my blog</span>
+        <span md-line class="secondary">edit</span>
       </a>
       <a md-list-item [routerLink]="['/resume']">
+        <md-icon md-list-icon class="secondary">book</md-icon>
         <span md-line>Resume</span>
         <span md-line class="secondary">View my resume in PDF form</span>
       </a>

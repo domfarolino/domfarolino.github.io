@@ -9,7 +9,7 @@ button {
   background-color:#2E66AD !important;
 }
 
-md-card {
+md-card+md-card {
   margin-top:40px;
 }
 
