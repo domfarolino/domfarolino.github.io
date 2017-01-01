@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Bosley Club</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Dom Farolino">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="theme-color" content="#5F5E5E">
+
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@DomFarolino">
+    <meta name="twitter:title" content="Progressive Web App on Bosley Street"/>
+    <meta name="twitter:description" content="Progressive Web App running on Raspberry Pi from Bosley Street"/>
+    <meta name="twitter:image" content="/imgs/bosley@192.png"/>
+    <meta name="twitter:image:alt" content="Progressive Web App Logo (Cube)"/>
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/imgs/bosley@192.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/imgs/bosley@16.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/imgs/bosley@32.png"/>
+
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Roboto">
+    <link rel="stylesheet" href="/css/master.css" media="screen">
+
+    <script>
+      var host = "bosley.club";
+      if ((host == window.location.host) && (window.location.protocol != "https:")) window.location.protocol = "https";
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-content">
+        <img src="/imgs/bosleybox.svg"alt="bosley box icon">
+        <h2 class="header-title">Dom Farolino</h2>
+        <nav>
+          <ul>
+            <li><a id="a-home" href="/">Home</a></li>
+            <li><a id="a-resume" href="/resume">Resume</a></li>
+            <li><a id="a-public-keys" href="/public-keys">Public Keys</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <section class="view-content visible">
