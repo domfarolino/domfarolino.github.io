@@ -1,6 +1,6 @@
 {
-  "name": "bosley-club",
-  "version": "0.0.0",
+  "name": "domfarolino",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "concurrently \"npm run webpack\" \"npm run serve-prod\" --kill-others",
