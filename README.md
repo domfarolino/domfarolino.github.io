@@ -5,3 +5,13 @@
 [![Dependency Status](https://david-dm.org/domfarolino/domfarolino.github.io.svg)](https://david-dm.org/domfarolino/domfarolino.github.io)
 [![devDependency Status](https://david-dm.org/domfarolino/domfarolino.github.io/dev-status.svg)](https://david-dm.org/domfarolino/domfarolino.github.io#info=devDependencies)
 [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
+
+> More docs coming
+
+```sh
+git clone git@github.com:domfarolino/domfarolino.github.io
+cd domfarolino.github.io
+npm install
+npm run dev
+# bash deploy.sh to deploy on GitHub pages
+```
