@@ -11,6 +11,7 @@
 ```sh
 git clone git@github.com:domfarolino/domfarolino.github.io
 cd domfarolino.github.io
+cp .env.example .env
 npm install
 npm run dev
 # bash deploy.sh to deploy on GitHub pages

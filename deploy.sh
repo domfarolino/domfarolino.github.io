@@ -6,6 +6,6 @@ cp -r ./public/* ./ && rm -R ./public/* &&
 node render.js;
 echo "domfarolino.com" > CNAME;
 git add .
-git commit -m "New build"
+git commit -m "New build: $(date +%Y-%m-%d)"
 git push --set-upstream origin master -f &&
 git checkout develop
