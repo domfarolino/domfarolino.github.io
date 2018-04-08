@@ -12,6 +12,10 @@ html, body {
   font-family: Roboto, sans-serif;
 }
 
+p {
+  word-spacing: 2px;
+}
+
 section.view-content {
   contain: content; /*layout style paint */
   top: 80px;
