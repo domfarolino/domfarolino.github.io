@@ -11,3 +11,4 @@ function renderFile(fileName) {
 renderFile("index.ejs")
 renderFile("resume/index.ejs")
 renderFile("public-keys/index.ejs")
+renderFile("research/index.ejs")
