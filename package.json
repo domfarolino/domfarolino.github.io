@@ -22,11 +22,11 @@
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
-    "babel-loader": "^6.2.8",
+    "babel-loader": "^9.1.0",
     "babel-preset-es2015": "^6.18.0",
     "concurrently": "^3.1.0",
     "css-loader": "^0.26.0",
     "html-loader": "^0.4.4",
-    "webpack": "^2.1.0-beta.27"
+    "webpack": "^5.75.0"
   }
 }
