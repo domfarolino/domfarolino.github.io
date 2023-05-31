@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "concurrently \"npm run webpack\" \"npm run serve-prod\" --kill-others",
-    "dev": "concurrently \"npm run webpack\" \"npm run serve-dev\" --kill-others",
+    "start": "npm run serve-prod",
+    "dev": "npm run serve-dev",
     "serve-prod": "sudo bash -ic \"node ./app\"",
-    "serve-dev": "export PORT=8080 HTTPS_CHALLENGE_PORT=8081; node ./app",
-    "webpack": "cd ./lib/client && ../../node_modules/webpack/bin/webpack.js --watch && cd ../.."
+    "serve-dev": "export PORT=8080 HTTPS_CHALLENGE_PORT=8081; node ./app"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -21,12 +20,7 @@
     "morgan": "^1.7.0"
   },
   "devDependencies": {
-    "babel-core": "^6.18.2",
-    "babel-loader": "^6.2.8",
-    "babel-preset-es2015": "^6.18.0",
-    "concurrently": "^3.1.0",
     "css-loader": "^0.26.0",
-    "html-loader": "^0.4.4",
-    "webpack": "^2.1.0-beta.27"
+    "html-loader": "^0.4.4"
   }
 }
