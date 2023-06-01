@@ -125,6 +125,14 @@ class Router {
 
       // Plain old li click listener
       link.addEventListener('click', evt => {
+        // Links deemed "external" don't get treated with client-side code.
+        if (evt.target.firstChild.dataset.external) {
+          // Trigger the anchor click handler, which will `preventDefault()` and
+          // let the browser's usual navigation mechanism takeover.
+          evt.target.firstChild.click();
+          return;
+        }
+
         this.go(evt.target.firstChild.href);
       });
 
@@ -137,12 +145,13 @@ class Router {
        * href
        */
       link.firstChild.addEventListener('click', evt => {
+        evt.stopPropagation(); // prevents us from triggering li click again on bubble stage
+
         // Links deemed "external" don't get treated with client-side code.
         if (evt.target.dataset.external)
           return;
 
         evt.preventDefault();
-        evt.stopPropagation(); // prevents us from triggering li click again on bubble stage
         link.click();
       });
     });
