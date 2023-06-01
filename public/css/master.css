@@ -16,6 +16,14 @@ p {
   word-spacing: 2px;
 }
 
+.dom-card li {
+  line-height: 27px;
+}
+
+a:visited {
+  color: LinkText;
+}
+
 section.view-content {
   contain: content; /*layout style paint */
   top: 80px;

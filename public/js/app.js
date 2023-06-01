@@ -137,6 +137,10 @@ class Router {
        * href
        */
       link.firstChild.addEventListener('click', evt => {
+        // Links deemed "external" don't get treated with client-side code.
+        if (evt.target.dataset.external)
+          return;
+
         evt.preventDefault();
         evt.stopPropagation(); // prevents us from triggering li click again on bubble stage
         link.click();
