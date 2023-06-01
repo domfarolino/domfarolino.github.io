@@ -2,7 +2,7 @@
 
     <div view class="visible" id="view-home">
       <div class="dom-card">
-        <h2>About Me</h2>
+        <h2 id=about-me>About Me</h2>
         <p>
           I'm Dom Farolino, a software engineer at
           <span style="color: #4285F4">G</span><span style="color: #DB4437">o</span><span style="color: #F4B400">o</span><span style="color: #4285F4">g</span><span style="color: #0F9D58">l</span><span style="color: #DB4437">e</span>
@@ -10,11 +10,6 @@
           I graduated from the University of Cincinnati in 2019, and interned on the Chrome team in
           Tokyo in the summer of 2019, Microsoft in 2018, and Mozilla in 2017. My interests range
           from computer science theory &amp; algorithms, to the web platform and more.
-        </p>
-        <h3>Computer Science</h3>
-        <p>
-          I used to participate in a lot of competitive programming contests, and have a strong
-          interest in graph theory. I love C++ &amp; JavaScript, and am learning Rust.
         </p>
         <h3>Web Platform</h3>
         <p>
@@ -24,59 +19,57 @@
           contributor to the <a href=https://html.spec.whatwg.org/multipage/>HTML Standard</a>, and editor of some other specs.
           I largely work on loading-related projects &amp; web platform APIs, scheduling and IPC architecture,
           and Chrome's <a href=https://privacysandbox.com/>privacy-preserving APIs</a> for loading ads on the web
-          (<a href=https://docs.google.com/document/d/1HAU9IiHZU4KBPC_rEk3BQYrWTK50PdNGg8CcHhVLXig/edit>design doc</a>,
-          <a href=https://bugs.chromium.org/p/chromium/issues/detail?id=1123606>crbug</a>). All of my Chromium contributions can be found
-          <a href=https://chromium-review.googlesource.com/q/owner:dom%2540chromium.org>here</a>.
+          (<a href=https://docs.google.com/document/d/1HAU9IiHZU4KBPC_rEk3BQYrWTK50PdNGg8CcHhVLXig/edit>design doc</a>).
+          You can see all of my Chromium contributions <a
+          href=https://chromium-review.googlesource.com/q/owner:dom%2540chromium.org>here</a>.
         </p>
+        <details>
+          <summary>Internship history</summary>
+          <p>
+            In the summer of 2019, I interned with Google in Tokyo on the Chrome loading team after contributing
+            to Chromium for about a year and a half throughout college. Over the summer I shipped subresource integrity
+            support for link preloads
+            (<a href=https://docs.google.com/document/d/1l8y_T3z-nb0smR9EVoZ3TeEI6rGzLw74vvzWzODsnDQ/edit>design doc</a>),
+            and worked on enabling cross-origin prefetch in a privacy-preserving manner, with Chromium's double-keyed cache
+            implementation (<a
+            href=https://docs.google.com/document/d/1bKGDIePAuF6YXmmrwM33LeLvtuCsla3vTspsxsNp-f8/edit>design doc</a>).
+          </p>
+          <p>
+            In 2017 I interned with Mozilla in Mountain View, CA on the Firefox graphics team
+            where I helped implement off-main-thread painting.
+          </p>
+        </details>
+        <h3>Computer Science</h3>
         <p>
-          In the summer of 2019, I interned with Google in Tokyo on the Chrome loading team after contributing
-          to Chromium for about a year and a half throughout college. Over the summer I shipped subresource integrity
-          support for link preloads
-          (<a href=https://docs.google.com/document/d/1l8y_T3z-nb0smR9EVoZ3TeEI6rGzLw74vvzWzODsnDQ/edit>design doc</a>,
-          <a href=https://crbug.com/677022>crbug</a>), and worked on enabling cross-origin prefetch in a
-          privacy-preserving manner, with Chromium's double-keyed cache implementation
-          (<a href=https://docs.google.com/document/d/1bKGDIePAuF6YXmmrwM33LeLvtuCsla3vTspsxsNp-f8/edit>design doc</a>,
-          <a href=https://crbug.com/939317>crbug</a>).
-        </p>
-        <p>
-          During the summer of 2017 I interned with Mozilla in Mountain View, CA on the Firefox graphics team
-          where I helped implement off-main-thread painting.
+          I used to participate in a lot of competitive programming contests, and have a strong
+          interest in graph theory. I love C++ &amp; JavaScript, and am learning Rust.
         </p>
       </div>
       <div class="dom-card">
-        <h2>Projects</h2>
+        <h2 id=projects>Projects</h2>
         <p>
-          My personal projects can be found on my <a href=https://github.com/domfarolino/>GitHub</a> page. I maintain an
-          <a href=https://github.com/domfarolino/algorithms/>algorithms</a> repository aimed at providing detailed
-          explanations and implementations of classic algorithms, data structures, and competitive programming problems.
-          Most recently I've been developing a small <a href=https://github.com/domfarolino/mage>interprocess communication
-          library</a>, and I also maintain a <a href=https://blog.domfarolino.com/>blog</a> of web- and algorithm-related posts.
+          My personal projects are <a href=https://github.com/domfarolino/>on GitHub</a>, where I maintain an
+          <a href=https://github.com/domfarolino/algorithms/>algorithms</a> repository providing detailed explanations
+          &amp; implementations of classic algorithms, data structures, and competitive programming problems.
+          I've also been developing a small <a href=https://github.com/domfarolino/mage>IPC library</a> called
+          Mage, and <a href=https://dom.substack.com>writing technical articles</a>.
         </p>
-        <p>
-          <details>
-            <summary>Web projects</summary>
-            <ul>
-              <li><a href=https://gh-pages.glitch.me>GitHub Pages Viewer</a></li>
-              <li><a href=https://domfarolino.com/push-notifications>Push notifications demo</a></li>
-              <li><a href=https://domfarolino.com/svg-editor>SVG editor</a></li>
-              <li><a href=https://blog.domfarolino.com>Old blog</a></li>
-            </ul>
-          </details>
-        </p>
-        <p>
-          <details>
-            <summary>Other projects</summary>
-            <ul>
-              <li><a href=https://github.com/domfarolino/algorithms>Algorithms</a></li>
-              <li><a href=https://github.com/domfarolino/mage>🧙‍♂️ Mage IPC library</a></li>
-              <li><a href=https://github.com/domfarolino/base>🧱 <code>//base</code> library</a></li>
-              <li><a href=https://github.com/domfarolino/specfmt>specfmt</a></li>
-            </ul>
-          </details>
-        </p>
+        <details>
+          <summary>More notable projects</summary>
+          <ul>
+            <li><a href=https://gh-pages.glitch.me>👀 GitHub Pages Viewer</a></li>
+            <li><a href=https://domfarolino.com/push-notifications>🔔 Web push notifications demo</a></li>
+            <li><a href=https://domfarolino.com/svg-editor>✏️ SVG editor</a></li>
+            <li><a href=https://github.com/domfarolino/base>🧱 <code style="font-size: 16px;">//base</code> library</a></li>
+            <li><a href=https://github.com/domfarolino/algorithms>💎 Algorithms</a></li>
+            <li><a href=https://github.com/domfarolino/mage>🧙‍♂️ Mage IPC library</a></li>
+            <li><a href=https://github.com/domfarolino/specfmt>✍️ specfmt</a></li>
+            <li><a style="color: #413c38;" href=https://blog.domfarolino.com>Old blog</a></li>
+            <li><a style="color: #413c38;" href=https://github.com/domfarolino/angular2-login-seed>Angular 2 login seed</a></li>
+          </ul>
       </div>
        <div class="dom-card">
-        <h2>Talks & Presentations</h2>
+        <h2 id=talks>Talks & Presentations</h2>
         <table>
           <tbody>
             <tr>
@@ -131,7 +124,7 @@
         </table>
       </div>
       <div class="dom-card">
-        <h2>Contact Me</h2>
+        <h2 id=contact>Contact Me</h2>
         <ul>
           <li>
             <a href=mailto:domfarolino@gmail.com>Email</a>
