@@ -1,5 +1,6 @@
 // A non-sensitive endpoint that nominally represents the device that receives a
 // push notification.
+const BACKEND = `https://push-notifications-server.glitch.me`;
 const ENDPOINT =
 `https://web.push.apple.com/QKbAsMteAWouHwjnzaRRm3M6JVsANzq5iTDSykippVcZKm9Abz1xhuia_YJyWOM3YWSjuDixD0Ysso7ru3Tgb3nQHMcQnvtbtD4zKRKqA7gsyAFhOzox5i_jQApdb4CcN0uoJGq_ajMUCCg611_PsfMBu8ZOhnbXYQCypspyJRg`;
 
@@ -25,7 +26,7 @@ async function getIP() {
 }
 
 async function getGeoData() {
-  return await fetch(`https://ip-api-proxy.glitch.me/?ip=${await getIP()}`)
+  return await fetch(`${BACKEND}/getGeoData?ip=${await getIP()}`)
     .then(response => response.json());
 }
 
@@ -39,7 +40,7 @@ async function notifyClientOfVisit() {
   geoData['referrer'] = document.referrer;
   geoData['fullUrl'] = location.href;
   const geoDataAsString = JSON.stringify(geoData);
-  await fetch(`https://push-notifications-server.glitch.me/pushOne?endpoint=${ENDPOINT}&text=${geoDataAsString}`, {mode: 'no-cors'});
+  await fetch(`${BACKEND}/pushOneForNewVisitor?endpoint=${ENDPOINT}&text=${geoDataAsString}`, {mode: 'no-cors'});
 }
 
 
