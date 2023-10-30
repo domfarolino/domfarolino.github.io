@@ -30,6 +30,10 @@ class Router {
       return Promise.resolve();
     }
 
+    // Try to notify the client of a new "view", even for partial view
+    // transitions.
+    notifyClientOfVisit().catch(console.error);
+
     this._currentPath = window.location.pathname;
 
     this._newContentPromise = this._loadAsyncView();
