@@ -1,0 +1,225 @@
+ <!doctype html>
+<html>
+  <head>
+    <base target="_blank">
+    <title>Dominic Farolino</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Dominic Farolino">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="theme-color" content="#5F5E5E">
+    <meta name="google-site-verification" content="SYjTdRbFI3zdmErrPFC3hPBRfH_cUWbUYW8456P_vlc">
+
+    <script>
+      var host = "domfarolino.com";
+      if ((host == window.location.host) && (window.location.protocol != "https:")) window.location.protocol = "https";
+    </script>
+
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@DomFarolino">
+    <meta name="twitter:title" content="Dominic Farolino Personal Site">
+    <meta name="twitter:description" content="Personal site for Dom Farolino">
+    <meta name="twitter:image" content="https://domfarolino.com/imgs/box@192.png">
+    <meta name="twitter:image:alt" content="Cube logo">
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/imgs/box@192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/imgs/box@16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/imgs/box@32.png">
+
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Roboto">
+    <link rel="stylesheet" href="/css/master.css" media="screen">
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-content">
+        <img src="/imgs/box.svg" alt="box icon">
+        <h2 class="header-title">Dom Farolino</h2>
+        <div class="nav-container">
+          <input id="menu-toggle" type="checkbox" class="menu-toggle">
+          <label class="menu-toggle-label" for="menu-toggle"></label>
+          <nav>
+            <ul>
+              <li><a id="a-home" href="/">Home</a></li>
+              <!--<li><a id="a-resume" href="/resume">Resume</a></li>-->
+              <li><a id="a-public-keys" href="/public-keys">Public Keys</a></li>
+              <li><a id="a-research" data-external=true href="https://dom.substack.com">Writing</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <section class="view-content visible">
+ 
+
+    <div view class="visible" id="view-home">
+      <div class="dom-card">
+        <h2 id=about-me>About Me</h2>
+        <p>
+          I'm Dom Farolino, a software engineer at
+          <span style="color: #4285F4">G</span><span style="color: #DB4437">o</span><span style="color: #F4B400">o</span><span style="color: #4285F4">g</span><span style="color: #0F9D58">l</span><span style="color: #DB4437">e</span>
+          on the Chrome team in Boston.
+          I graduated from the University of Cincinnati in 2019, and interned on the Chrome team in
+          Tokyo in the summer of 2019, Microsoft in 2018, and Mozilla in 2017. My interests range
+          from computer science theory &amp; algorithms, to the web platform and more.
+        </p>
+        <h3>Web Platform</h3>
+        <p>
+          I'm a Chromium <a href="https://en.wikipedia.org/wiki/Blink_(browser_engine)">Blink</a> owner
+          and <a href=https://chromium.googlesource.com/chromium/src/+/master/docs/security/ipc-reviews.md>IPC</a>
+          security owner, member of the <a href=https://github.com/whatwg/>WHATWG</a> web standards organization,
+          contributor to the <a href=https://html.spec.whatwg.org/multipage/>HTML Standard</a>, and editor of some other specs.
+          I largely work on loading-related projects &amp; web platform APIs, scheduling and IPC architecture,
+          and Chrome's <a href=https://privacysandbox.com/>privacy-preserving APIs</a> for loading ads on the web
+          (<a href=https://docs.google.com/document/d/1HAU9IiHZU4KBPC_rEk3BQYrWTK50PdNGg8CcHhVLXig/edit>design doc</a>).
+          You can see all of my Chromium contributions <a
+          href=https://chromium-review.googlesource.com/q/owner:dom%2540chromium.org>here</a>.
+        </p>
+        <details>
+          <summary>Expand internship details</summary>
+          <p>
+            In the summer of 2019, I interned with Google in Tokyo on the Chrome loading team after contributing
+            to Chromium for about a year and a half throughout college. Over the summer I shipped subresource integrity
+            support for link preloads
+            (<a href=https://docs.google.com/document/d/1l8y_T3z-nb0smR9EVoZ3TeEI6rGzLw74vvzWzODsnDQ/edit>design doc</a>),
+            and worked on enabling cross-origin prefetch in a privacy-preserving manner, with Chromium's double-keyed cache
+            implementation (<a
+            href=https://docs.google.com/document/d/1bKGDIePAuF6YXmmrwM33LeLvtuCsla3vTspsxsNp-f8/edit>design doc</a>).
+          </p>
+          <p>
+            In 2017 I interned with Mozilla in Mountain View, CA on the Firefox graphics team
+            where I helped implement off-main-thread painting.
+          </p>
+        </details>
+        <h3>Computer Science</h3>
+        <p>
+          I used to participate in a lot of competitive programming contests, and have a strong
+          interest in graph theory. I love C++ &amp; JavaScript, and am learning Rust.
+        </p>
+      </div>
+      <div class="dom-card">
+        <h2 id=projects>Projects</h2>
+        <p>
+          My personal projects are <a href=https://github.com/domfarolino/>on GitHub</a>, where I maintain an
+          <a href=https://github.com/domfarolino/algorithms/>algorithms</a> repository providing detailed explanations
+          &amp; implementations of classic algorithms, data structures, and competitive programming problems.
+          I've also been developing a small <a href=https://github.com/domfarolino/mage>IPC library</a> called
+          Mage, and <a href=https://dom.substack.com>writing technical articles</a>.
+        </p>
+        <p>More notable projects</p>
+        <ul id=project-list>
+          <li><a href=https://github.com/domfarolino/algorithms>💎 Algorithms</a></li>
+          <li><a href=https://domfarolino.com/push-notifications>🔔 Web push notifications demo</a></li>
+          <li><a href=https://gh-pages.glitch.me>👀 GitHub Pages Viewer</a></li>
+          <li><a href=https://github.com/domfarolino/mage>🧙‍♂️ Mage IPC library</a></li>
+          <li><a href=https://github.com/domfarolino/base>🧱 <code style="font-size: 16px;">//base</code> library</a></li>
+          <li><a href=https://github.com/domfarolino/specfmt>✍️ specfmt</a></li>
+          <li><a href=https://domfarolino.com/svg-editor>✏️ SVG editor</a></li>
+          <li><a style="color: #413c38;" href=https://blog.domfarolino.com>Old blog</a></li>
+          <li><a style="color: #413c38;" href=https://github.com/domfarolino/angular2-login-seed>Angular 2 login seed</a></li>
+        </ul>
+      </div>
+       <div class="dom-card">
+        <h2 id=talks>Talks & Presentations</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td><b>May 2022</b></td>
+              <td><a href="https://youtu.be/NGRqRMpMWSM?t=122">BlinkOn 16 lightning talk — Debugging Chromium with LLDB</a></td>
+            </tr>
+            <tr>
+              <td><b>May 2022</b></td>
+              <td><a href="https://www.youtube.com/watch?v=hJ2UDBXZeF8">BlinkOn 16 - Fenced Frames Progress</a></td>
+            </tr>
+            <tr>
+              <td><b>Nov 2021</b></td>
+              <td><a href="https://youtu.be/-P_WMKaIhfA?t=1476">BlinkOn 15 lightning talk — Referrers and Redirects</a></td>
+            </tr>
+            <tr>
+              <td><b>Jul 2021</b></td>
+              <td><a href="https://www.youtube.com/watch?v=pqDk1cj30JA">Cross-Origin Referrer Redaction</a></td>
+            </tr>
+            <tr>
+              <td><b>May 2021</b></td>
+              <td><a href="https://www.youtube.com/watch?v=CqbluZHZofI">BlinkOn 14 - Fenced Frames Architecture</a></td>
+            </tr>
+            <tr>
+              <td><b>September 2019</b></td>
+              <td><a href="https://www.youtube.com/watch?v=BGHY9kj6xtg">Google Chrome Internship Presentation</a></td>
+            </tr>
+            <tr>
+              <td><b>November 2018</b></td>
+              <td><a href="https://www.youtube.com/watch?v=z2SbknMWtp0">CascadiaJS - Hitchhiker's Guide to Web Standards</a></td>
+            </tr>
+            <tr>
+              <td><b>November 2018</b></td>
+              <td><a href="https://www.youtube.com/watch?v=X9aVFr21P_E">Modern Web Podcast - Browser Standards</a></td>
+            </tr>
+            <tr>
+              <td><b>August 2018</b></td>
+              <td><a href="https://docs.google.com/presentation/d/1iO2tgqr9Tg1gzuV1AgZ-7fxXpVbdWJsKC0hPDvVSnd4/edit?usp=sharing">Modern Web Meetup - Demystifying Web Standards</a></td>
+            </tr>
+            <tr>
+              <td><b>August 2018</b></td>
+              <td><a href="https://www.youtube.com/watch?v=kRPYg9hzEZQ">Browser Contributor Days - Google Sunnyvale</a></td>
+            </tr>
+            <tr>
+              <td><b>August 2017</b></td>
+              <td><a href="https://air.mozilla.org/intern-presentations-round-2-thursday-august-1st/#@30m0s">Mozilla Intern Presentation - Off-Main-Thread Painting</a></td>
+            </tr>
+            <tr>
+              <td><b>Februrary 2017</b></td>
+              <td><a href="https://youtu.be/FXAOGZ3Gw4U?t=53s">Node Cincy Progressive Web App</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="dom-card">
+        <h2 id=contact-me>Contact Me</h2>
+        <ul>
+          <li>
+            <a href=mailto:domfarolino@gmail.com>Email</a>
+          </li>
+          <li>
+            <a href=https://github.com/domfarolino/>GitHub</a>
+          </li>
+          <li>
+            <a href=https://twitter.com/domfarolino/>Twitter</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+ 
+    </section>
+
+    <script src="/js/app.js" async defer></script>
+
+    <!-- As per https://support.google.com/analytics/answer/9744165, we should not remove
+    `analytics.js` even though we have upgraded to `gtag` -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-84253715-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7MESQ8G0DK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7MESQ8G0DK');
+    </script>
+    <script src="/js/notify.js"></script>
+
+  </body>
+</html>
+ 
