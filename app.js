@@ -39,14 +39,6 @@ app.get('*', (request, response, next) => {
 });
 
 /**
- * API setup
- */
-const apiV1 = require('./lib/controllers/api/v1');
-
-app.get('/api/v1*', apiV1.apiMiddleware); // Sets headers for every API route and calls .next()
-app.get('/api/v1', apiV1.index);
-
-/**
  * Support for partial view rendering. This handler matches requests like: `/`, `/path`, and `/path/`
  * See regex in action: https://regex101.com/r/ciRbkx/4
  * We render the proper view partial giving it a boolean in the data object related to whether the
