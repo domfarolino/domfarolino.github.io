@@ -3,9 +3,7 @@ name: Build & deploy site
 on:
   push:
     branches:
-    # TODO(domfarolino): Change this to `master` once we get rid of the existing
-    # master branch, and rename the default branch to master.
-    - develop
+    - master
 
 jobs:
   build:
