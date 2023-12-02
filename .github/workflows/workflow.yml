@@ -1,0 +1,33 @@
+name: Build & deploy site
+
+on:
+  push:
+    branches:
+    # TODO(domfarolino): Change this to `master` once we get rid of the existing
+    # master branch, and rename the default branch to master.
+    - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: Setup
+       uses: actions/checkout@v3
+       uses: actions/setup-node@v4
+       with:
+         node-version: 18
+
+     - name: Build static site files
+       run: |
+         npm i
+         cd public
+         node ../render.js
+         # From the old `deploy.sh` script
+         echo "domfarolino.com" > CNAME
+
+     # This defaults to using the `gh-pages` branch.
+     - name: Publish generated files
+       uses: rayluo/github-pages-overwriter@v1.3
+       with:
+         source-directory: public
