@@ -4,11 +4,6 @@
 
 ## To build and deploy
 
-```sh
-git clone git@github.com:domfarolino/domfarolino.github.io
-cd domfarolino.github.io
-cp .env.example .env
-npm install
-npm run dev
-bash deploy.sh # to deploy on GitHub pages
-```
+Just push to the `deploy` branch and [the GitHub
+workflow](https://github.com/domfarolino/domfarolino.github.io/tree/develop/.github/workflows/workflow.yml)
+will deploy the generated static site to GitHub pages.
