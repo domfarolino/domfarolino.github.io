@@ -1,8 +1,9 @@
 // A non-sensitive endpoint that nominally represents the device that receives a
 // push notification.
 const BACKEND = `https://push-notifications-server.glitch.me`;
-const ENDPOINT =
-`https://web.push.apple.com/QKbAsMteAWouHwjnzaRRm3M6JVsANzq5iTDSykippVcZKm9Abz1xhuia_YJyWOM3YWSjuDixD0Ysso7ru3Tgb3nQHMcQnvtbtD4zKRKqA7gsyAFhOzox5i_jQApdb4CcN0uoJGq_ajMUCCg611_PsfMBu8ZOhnbXYQCypspyJRg`;
+const ENDPOINT = `
+https://web.push.apple.com/QLW2A8B_w00kz77r2sIdESXTsF48tWF30HQpKr8O9aERaW7uKA3cvi6R0HC7Ow0xsMX64TGcUOas2xyhM4eJIAvWFB64fyDc-pZcan60rPJI6fcmR-nM0l3kI3HHN6ixALvRl4RMtGK7ZbhWfDXaLnKOKiit25omfY4AHwm2nTY
+`;
 
 // Probably this is a common function, but I first saw it on
 // https://github.com/matteosandrin/personal-website/blob/master/public/assets/js/notify.js#L1C1-L11.
