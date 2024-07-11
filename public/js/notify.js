@@ -2,7 +2,7 @@
 // push notification.
 const BACKEND = `https://push-notifications-server.glitch.me`;
 const ENDPOINT = `
-https://web.push.apple.com/QLW2A8B_w00kz77r2sIdESXTsF48tWF30HQpKr8O9aERaW7uKA3cvi6R0HC7Ow0xsMX64TGcUOas2xyhM4eJIAvWFB64fyDc-pZcan60rPJI6fcmR-nM0l3kI3HHN6ixALvRl4RMtGK7ZbhWfDXaLnKOKiit25omfY4AHwm2nTY
+https://web.push.apple.com/QIwkGNb85F7sgoCewT06cUMwRZvF6QoTf2JeM-2F8zGpjmiD6shEsfi4hrjwg5Du6DPaYuiQoARgEPg-62QiBtQAJ7e-UR41EtUnPHXrTAjV8ffBoJ6yCHxzJCH53ylEYTeP_tQzGzscQ15wnT5ChhkEEpa5GrLy-VdsBdraMg4
 `;
 
 // Probably this is a common function, but I first saw it on
