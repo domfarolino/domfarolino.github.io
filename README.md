@@ -4,6 +4,6 @@
 
 ## To build and deploy
 
-Just push to the `deploy` branch and [the GitHub
+Just push to the `master` branch and [the GitHub
 workflow](https://github.com/domfarolino/domfarolino.github.io/tree/develop/.github/workflows/workflow.yml)
 will deploy the generated static site to GitHub pages.
