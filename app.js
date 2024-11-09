@@ -1,13 +1,9 @@
 'use strict';
 
-require('dotenv').config({silent: true});
-
-const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-const LEX = require('letsencrypt-express');
 const cookieParser = require('cookie-parser');
 
 const express = require('express');
@@ -67,46 +63,7 @@ app.get(/\/([^.]*$)/, (request, response) => {
  */
 app.use('/', express.static(path.join(__dirname, 'public')));
 
-/**
- * Letsencrypt and other stuff below
- */
-
-const lex = LEX.create({
-  server: 'staging',
-  //configDir: require('os').homedir() + '/letsencrypt/etc',
-  configDir: '/etc/letsencrypt',
-  approveDomains: approveDomains
-});
-
-function approveDomains(opts, certs, cb) {
-  // This is where you check your database and associated
-  // email addresses with domains and agreements and such
-
-  // The domains being approved for the first time are listed in opts.domains
-  // Certs being renewed are listed in certs.altnames
-  if (certs) {
-    opts.domains = certs.altnames;
-  } else {
-    opts.email = 'domfarolino@gmail.com';
-    opts.agreeTos = true;
-  }
-
-  // NOTE: you can also change other options such as `challengeType` and `challenge`
-  // opts.challengeType = 'http-01';
-  // opts.challenge = require('le-challenge-fs').create({});
-
-  cb(null, { options: opts, certs: certs });
-}
-
-lex.onRequest = app;
-
-require('http').createServer(lex.middleware(app)).listen(process.env.PORT, function () {
-  console.log("Listening for ACME http-01 challenges on", this.address());
-});
-
-require('https').createServer(lex.httpsOptions, lex.middleware(app)).listen(process.env.HTTPS_CHALLENGE_PORT, function () {
-  console.log("Listening for ACME tls-sni-01 challenges and serve app on", this.address());
-});
+require('http').createServer(app).listen(process.env.PORT, _ => {});
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

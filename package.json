@@ -3,20 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "npm run serve-prod",
-    "dev": "npm run serve-dev",
-    "serve-prod": "sudo bash -ic \"node ./app\"",
-    "serve-dev": "export PORT=8000 HTTPS_CHALLENGE_PORT=8001; node ./app"
+    "start": "export PORT=8000; node ./app"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
-    "debug": "^2.3.2",
-    "dotenv": "^2.0.0",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
-    "http2": "^3.3.2",
-    "letsencrypt-express": "^2.0.5",
     "morgan": "^1.7.0"
   }
 }
