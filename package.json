@@ -6,8 +6,6 @@
     "start": "export PORT=8000; node ./app"
   },
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "cookie-parser": "^1.4.3",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "morgan": "^1.7.0"
