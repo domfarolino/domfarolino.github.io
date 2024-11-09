@@ -37,6 +37,10 @@ async function notifyClientOfVisit() {
     return;
   }
 
+  if (localStorage.suppressPushNotifications === 'true') {
+    return;
+  }
+
   const geoData = await getGeoData();
   geoData['referrer'] = document.referrer;
   geoData['fullUrl'] = location.href;
@@ -44,6 +48,19 @@ async function notifyClientOfVisit() {
   await fetch(`${BACKEND}/pushOneForNewVisitor?endpoint=${ENDPOINT}&text=${geoDataAsString}`, {mode: 'no-cors'});
 }
 
+async function notifyClientOfLinkClick(anchor) {
+  // Don't do any notifying for bots.
+  if (botCheck()) {
+    return;
+  }
+
+  if (localStorage.suppressPushNotifications === 'true') {
+    return;
+  }
+
+  const body = `${anchor.textContent} (${anchor.href})`;
+  await fetch(`${BACKEND}/pushOneForLinkClick?endpoint=${ENDPOINT}&text=${body}`, {mode: 'no-cors'});
+}
 
 (async function(){
   try {

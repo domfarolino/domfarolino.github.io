@@ -25,6 +25,10 @@
       gtag('config', 'G-7MESQ8G0DK');
     </script>
     <script src="/js/notify.js"></script>
-
+    <script>
+      Array.from(document.querySelectorAll('a')).forEach(a => {
+        a.addEventListener('click', e => notifyClientOfLinkClick(a));
+      });
+    </script>
   </body>
 </html>
