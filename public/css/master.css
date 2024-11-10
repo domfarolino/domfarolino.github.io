@@ -222,3 +222,7 @@ body.view-pending::after {
 table td:first-child {
   padding-right: 45px;
 }
+
+td {
+  padding: 3px;
+}
