@@ -142,11 +142,11 @@ body.view-pending::after {
 
 @font-face {
   font-family: Retrofunk;
-  src: url("/fonts/Retrofunk.otf") format("opentype");
+  src: url("fonts/Retrofunk.otf") format("opentype");
 }
 @font-face {
   font-family: DashHorizon;
-  src: url("/fonts/DashHorizon.otf") format("opentype");
+  src: url("fonts/DashHorizon.otf") format("opentype");
 }
 
 .header > .header-content > .header-title {
