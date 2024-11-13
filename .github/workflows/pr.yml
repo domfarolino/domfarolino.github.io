@@ -18,16 +18,12 @@ jobs:
        with:
          node-version: 18
 
-     - name: Build static site files
+     - name: Build BASE static site files
        run: |
+         git checkout $GITHUB_BASE_REF
          echo $GITHUB_HEAD_REF
          echo $GITHUB_BASE_REF
-         # npm i
-         #cd public
-         # node ../render.js
-         # From the old `deploy.sh` script
-         # echo "domfarolino.com" > CNAME
-
+         echo $GITHUB_REF
      # This defaults to using the `gh-pages` branch.
      # - name: Publish generated files
        # uses: rayluo/github-pages-overwriter@v1.3
