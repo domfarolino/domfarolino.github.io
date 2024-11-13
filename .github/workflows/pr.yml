@@ -58,6 +58,7 @@ jobs:
          # `<pr-number>/` folder.
          cd ../
          mv public/* .
+         cd ../
 
      # This defaults to using the `gh-pages` branch.
      - name: Publish generated files
