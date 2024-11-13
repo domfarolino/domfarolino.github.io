@@ -20,7 +20,6 @@ jobs:
 
      - name: Build BASE static site files
        run: |
-         git checkout $GITHUB_BASE_REF
          echo $GITHUB_HEAD_REF
          echo $GITHUB_BASE_REF
          echo $GITHUB_REF
