@@ -209,9 +209,12 @@ body.view-pending::after {
 }
 
 @media (max-width: 730px) {
-  .header > .header-content > .header-title.DashHorizon, .header > .header-content > .header-title.Retrofunk {
+  /*Only shrink the font that is larger. The other one is just fine.*/
+  .header > .header-content > .header-title.Retrofunk {
+    letter-spacing: 0px;
     font-size: 45px;
   }
+
   #flex {
     flex-direction: column;
   }
@@ -220,9 +223,16 @@ body.view-pending::after {
   }
 }
 
-@media (max-width: 405px) {
-  .header > .header-content > .header-title.DashHorizon, .header > .header-content > .header-title.Retrofunk {
+@media (max-width: 400px) {
+  .header > .header-content > .header-title.Retrofunk {
+    letter-spacing: 0px;
     font-size: 30px;
+    padding-top: 10px;
+  }
+
+  .header > .header-content > .header-title.DashHorizon {
+    letter-spacing: 0px;
+    font-size: 45px;
   }
 }
 
@@ -268,7 +278,8 @@ body.view-pending::after {
   }
 
   .header > .header-content > .header-title {
-    display: inline-block;
+    /*Center the title when the navigation buttons collapse*/
+    margin: 0 auto;
   }
 }
 
