@@ -12,13 +12,15 @@ jobs:
     steps:
      - name: Checkout
        uses: actions/checkout@v3
+       with:
+         ref: $GITHUB_BASE_REF # `master`
 
      - name: Node
        uses: actions/setup-node@v4
        with:
          node-version: 18
 
-     - name: Build BASE static site files
+     - name: Build base static site files
        run: |
          # git checkout $GITHUB_BASE_REF
          echo $GITHUB_HEAD_REF
@@ -26,7 +28,30 @@ jobs:
          echo $GITHUB_REF
          echo $GITHUB_REPOSITORY
          echo $GITHUB_REPOSITORY_OWNER
-         echo ${GITHUB_REPOSITORY#*/}
+         npm i
+         cd public
+         node ../render.js
+         # From the old `deploy.sh` script
+         echo "domfarolino.com" > CNAME
+
+     - name: Clone PR branch
+       uses: GuillaumeFalourd/clone-github-repo-action@v2.3
+       with:
+         depth: 1
+         branch: $GITHUB_HEAD_REF
+         owner: $GITHUB_REPOSITORY_OWNER
+         repository: ${GITHUB_REPOSITORY#*/}
+
+     - name: Build PR static site files
+       run: |
+         mv ${GITHUB_REPOSITORY#*/} ${{ github.event.pull_request.number }}
+         echo ls
+         ls
+         cd ${{ github.event.pull_request.number }}
+         npm i
+         cd public
+         node ../render.js
+
      # This defaults to using the `gh-pages` branch.
      # - name: Publish generated files
        # uses: rayluo/github-pages-overwriter@v1.3
