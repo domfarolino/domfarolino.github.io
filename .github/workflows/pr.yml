@@ -1,0 +1,60 @@
+name: Build & deploy PR preview
+
+on:
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  pr_preview:
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: Checkout
+       uses: actions/checkout@v3
+       with:
+         ref: ${{ github.event.pull_request.base.ref }} # `master`
+
+     - name: Node
+       uses: actions/setup-node@v4
+       with:
+         node-version: 18
+
+     - name: Build base static site files
+       run: |
+         npm i
+         cd public
+         node ../render.js
+         # From the old `deploy.sh` script
+         echo "domfarolino.com" > CNAME
+
+     - name: Clone PR branch
+       uses: GuillaumeFalourd/clone-github-repo-action@v2.3
+       with:
+         depth: 1
+         branch: $GITHUB_HEAD_REF
+         owner: $GITHUB_REPOSITORY_OWNER
+         repository: ${GITHUB_REPOSITORY#*/}
+
+     - name: Build PR static site files
+       run: |
+         mkdir public/pull
+         mv ${GITHUB_REPOSITORY#*/} public/pull/${{ github.event.pull_request.number }}
+         ls
+         cd public/pull/${{ github.event.pull_request.number }}
+         # Make sure it's not treated as a submodule when we try and publish the
+         # subdirectory's files.
+         rm -rf .git
+         npm i
+         cd public
+         node ../render.js
+         # Now move back and put the entire PR clone's `public/` folder into the
+         # `<pr-number>/` folder.
+         cd ../
+         mv public/* .
+
+     # This defaults to using the `gh-pages` branch.
+     - name: Publish generated files
+       uses: rayluo/github-pages-overwriter@v1.3
+       with:
+         source-directory: public
