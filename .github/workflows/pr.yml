@@ -13,7 +13,7 @@ jobs:
      - name: Checkout
        uses: actions/checkout@v3
        with:
-         ref: master
+         ref: ${{ github.event.pull_request.base.ref }} # `master`
 
      - name: Node
        uses: actions/setup-node@v4
@@ -51,6 +51,10 @@ jobs:
          npm i
          cd public
          node ../render.js
+         # Now move back and put the entire PR clone's `public/` folder into the
+         # `<pr-number>/` folder.
+         cd ../
+         mv public/* .
 
      # This defaults to using the `gh-pages` branch.
      # - name: Publish generated files
