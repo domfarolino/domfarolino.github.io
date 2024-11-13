@@ -203,6 +203,14 @@ body.view-pending::after {
   padding: 5px 15px;
 }
 
+#about {
+  display: flex;
+}
+
+#about > div:first-child {
+  padding-right: 10px;
+}
+
 @media (max-width: 730px) {
   /*Only shrink the font that is larger. The other one is just fine.*/
   .header > .header-content > .header-title.Retrofunk {
@@ -210,10 +218,17 @@ body.view-pending::after {
     font-size: 45px;
   }
 
-  #flex {
+  #about {
     flex-direction: column;
   }
-  #flex img {
+  #about > div:first-child {
+    padding: 0;
+  }
+  #about > div:last-child {
+    /*Center the picture on small screens*/
+    margin: 0 auto;
+  }
+  #about img {
     width: 300px;
   }
 }
