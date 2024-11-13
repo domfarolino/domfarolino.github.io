@@ -13,7 +13,7 @@ jobs:
      - name: Checkout
        uses: actions/checkout@v3
        with:
-         ref: $GITHUB_BASE_REF # `master`
+         ref: master
 
      - name: Node
        uses: actions/setup-node@v4
