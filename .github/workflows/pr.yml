@@ -1,0 +1,35 @@
+name: Build & deploy PR branch
+
+on:
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: Checkout
+       uses: actions/checkout@v3
+
+     - name: Node
+       uses: actions/setup-node@v4
+       with:
+         node-version: 18
+
+     - name: Build static site files
+       run: |
+         echo github.base_ref
+         echo github.head_ref
+         # npm i
+         #cd public
+         # node ../render.js
+         # From the old `deploy.sh` script
+         # echo "domfarolino.com" > CNAME
+
+     # This defaults to using the `gh-pages` branch.
+     # - name: Publish generated files
+       # uses: rayluo/github-pages-overwriter@v1.3
+       # with:
+         # source-directory: public
