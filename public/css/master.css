@@ -112,16 +112,10 @@ body.view-pending::after {
   width: 100%;
   height: 106px;
   margin: 0;
-  padding: 30px 20px 0px 20px;
+  padding-top: 30px;
   position: fixed;
   z-index: 9000;
   border-bottom: 10px solid #8b963b;
-
-  background: firebrick;
-  background: #5f5e5e;
-  background: #45b7ac;
-  background: #005fa9;
-  background: #0079d8;
   background: #195a28;
 }
 
@@ -138,6 +132,7 @@ body.view-pending::after {
   */
   max-width: 900px;
   margin: 0 auto;
+  padding: 0px 20px;
 }
 
 @font-face {
