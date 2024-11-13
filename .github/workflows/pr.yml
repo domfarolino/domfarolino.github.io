@@ -26,6 +26,7 @@ jobs:
          echo $GITHUB_REF
          echo $GITHUB_REPOSITORY
          echo $GITHUB_REPOSITORY_OWNER
+         echo ${GITHUB_REPOSITORY#*/}
      # This defaults to using the `gh-pages` branch.
      # - name: Publish generated files
        # uses: rayluo/github-pages-overwriter@v1.3
