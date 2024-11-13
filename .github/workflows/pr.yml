@@ -1,4 +1,4 @@
-name: Build & deploy PR branch
+name: Build & deploy PR preview
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
     - master
 
 jobs:
-  build:
+  pr_preview:
     runs-on: ubuntu-latest
 
     steps:
@@ -57,7 +57,7 @@ jobs:
          mv public/* .
 
      # This defaults to using the `gh-pages` branch.
-     # - name: Publish generated files
-       # uses: rayluo/github-pages-overwriter@v1.3
-       # with:
-         # source-directory: public
+     - name: Publish generated files
+       uses: rayluo/github-pages-overwriter@v1.3
+       with:
+         source-directory: public
