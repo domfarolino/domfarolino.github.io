@@ -145,14 +145,6 @@ body.view-pending::after {
   src: url("/fonts/Retrofunk.otf") format("opentype");
 }
 @font-face {
-  font-family: Basheq;
-  src: url("/fonts/Basheq.otf") format("opentype");
-}
-@font-face {
-  font-family: Arshine;
-  src: url("/fonts/Arshine.otf") format("opentype");
-}
-@font-face {
   font-family: DashHorizon;
   src: url("/fonts/DashHorizon.otf") format("opentype");
 }
