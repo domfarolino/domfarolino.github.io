@@ -20,8 +20,8 @@ jobs:
 
      - name: Build static site files
        run: |
-         echo github.base_ref
-         echo github.head_ref
+         echo $GITHUB_HEAD_REF
+         echo $GITHUB_BASE_REF
          # npm i
          #cd public
          # node ../render.js
