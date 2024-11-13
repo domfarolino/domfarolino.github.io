@@ -145,9 +145,9 @@ body.view-pending::after {
 }
 
 .header > .header-content > .header-title {
-  color: white;
-  margin: 0px;
-  margin-right: auto;
+  margin: 0px auto 0px 0px;
+
+  /* Default values */
   font-family: Retrofunk;
   font-size: 50px;
 }
