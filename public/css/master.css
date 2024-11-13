@@ -22,7 +22,7 @@ p {
 }
 
 li p, tr p, td p {
-  margin: 5px 0px 5px 0px;
+  margin: 5px 0px;
 }
 
 .dom-card li {
@@ -49,7 +49,7 @@ h2[id]::before {
   visibility: hidden;
 }
 
-ul#project-list > li > p> a {
+ul#project-list > li > p > a {
   text-decoration: none;
 }
 
@@ -155,17 +155,6 @@ body.view-pending::after {
 .header > .header-content > .header-title.Retrofunk {
   font-family: Retrofunk;
   letter-spacing: 3px;
-}
-.header > .header-content > .header-title.Basheq {
-  font-family: Basheq;
-  letter-spacing: 2px;
-  line-height: 35px;
-  font-size: 55px;
-  margin-bottom: 0px;
-}
-.header > .header-content > .header-title.Arshine {
-  font-family: Arshine;
-  letter-spacing: 5px;
 }
 .header > .header-content > .header-title.DashHorizon {
   font-family: DashHorizon;
