@@ -22,12 +22,6 @@ jobs:
 
      - name: Build base static site files
        run: |
-         # git checkout $GITHUB_BASE_REF
-         echo $GITHUB_HEAD_REF
-         echo $GITHUB_BASE_REF
-         echo $GITHUB_REF
-         echo $GITHUB_REPOSITORY
-         echo $GITHUB_REPOSITORY_OWNER
          npm i
          cd public
          node ../render.js
@@ -44,10 +38,9 @@ jobs:
 
      - name: Build PR static site files
        run: |
-         mv ${GITHUB_REPOSITORY#*/} ${{ github.event.pull_request.number }}
-         echo ls
+         mv ${GITHUB_REPOSITORY#*/} public/${{ github.event.pull_request.number }}
          ls
-         cd ${{ github.event.pull_request.number }}
+         cd public/${{ github.event.pull_request.number }}
          # Make sure it's not treated as a submodule when we try and publish the
          # subdirectory's files.
          rm -rf .git
@@ -58,7 +51,6 @@ jobs:
          # `<pr-number>/` folder.
          cd ../
          mv public/* .
-         cd ../
 
      # This defaults to using the `gh-pages` branch.
      - name: Publish generated files
