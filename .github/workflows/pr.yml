@@ -48,6 +48,9 @@ jobs:
          echo ls
          ls
          cd ${{ github.event.pull_request.number }}
+         # Make sure it's not treated as a submodule when we try and publish the
+         # subdirectory's files.
+         rm .git
          npm i
          cd public
          node ../render.js
