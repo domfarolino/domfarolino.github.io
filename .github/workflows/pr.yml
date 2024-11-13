@@ -38,9 +38,10 @@ jobs:
 
      - name: Build PR static site files
        run: |
-         mv ${GITHUB_REPOSITORY#*/} public/${{ github.event.pull_request.number }}
+         mkdir public/pull
+         mv ${GITHUB_REPOSITORY#*/} public/pull/${{ github.event.pull_request.number }}
          ls
-         cd public/${{ github.event.pull_request.number }}
+         cd public/pull/${{ github.event.pull_request.number }}
          # Make sure it's not treated as a submodule when we try and publish the
          # subdirectory's files.
          rm -rf .git
