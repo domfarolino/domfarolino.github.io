@@ -34,15 +34,20 @@
   <body>
     <div class="header">
       <div class="header-content">
-        <img src="/imgs/box.svg" alt="box icon">
-        <h2 class="header-title">Dom Farolino</h2>
+        <h1 class="header-title"><a target=_self href=#>Dom Farolino</a></h1>
+        <script>
+          const fonts = ['Retrofunk', /*'Basheq', 'Arshine',*/ 'DashHorizon'];
+          document.querySelector('h1').classList.add(fonts[Math.floor(Math.random() * 2)]);
+        </script>
         <div class="nav-container">
           <input id="menu-toggle" type="checkbox" class="menu-toggle">
           <label class="menu-toggle-label" for="menu-toggle"></label>
           <nav>
             <ul>
-              <li><a id="a-home" href="/">Home</a></li>
-              <li><a id="a-research" data-external=true href="https://dom.substack.com">Writing</a></li>
+              <li><a id="a-work" target=_self href="#work">Work</a></li>
+              <li><a id="a-projects" target=_self href="#projects">Projects</a></li>
+              <li><a id="a-talks" target=_self href="#talks">Talks</a></li>
+              <li><a id="a-writing" data-external=true href="https://dom.substack.com">Writing</a></li>
             </ul>
           </nav>
         </div>
