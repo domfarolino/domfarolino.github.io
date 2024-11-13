@@ -47,7 +47,7 @@ jobs:
          rm -rf .git
          npm i
          cd public
-         node ../render.js
+         node ../render.js \/pull\/${{ github.event.pull_request.number }}/
          # Now move back and put the entire PR clone's `public/` folder into the
          # `<pr-number>/` folder.
          cd ../

@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <base target="_blank">
+    <base href="<%-base_href_value%>" target="_blank">
     <title>Dominic Farolino</title>
     <meta charset="utf-8">
     <meta name="author" content="Dominic Farolino">
@@ -27,22 +27,27 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/imgs/box@16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/imgs/box@32.png">
 
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Roboto">
-    <link rel="stylesheet" href="/css/master.css" media="screen">
+    <link rel="stylesheet" href="css/master.css" media="screen">
   </head>
   <body>
     <div class="header">
       <div class="header-content">
-        <img src="/imgs/box.svg" alt="box icon">
-        <h2 class="header-title">Dom Farolino</h2>
+        <h1 class="header-title"><a target=_self href=#>Dom Farolino</a></h1>
+        <script>
+          const fonts = ['Retrofunk', 'DashHorizon'];
+          document.querySelector('h1').classList.add(fonts[Math.floor(Math.random() * 2)]);
+        </script>
         <div class="nav-container">
           <input id="menu-toggle" type="checkbox" class="menu-toggle">
           <label class="menu-toggle-label" for="menu-toggle"></label>
           <nav>
             <ul>
-              <li><a id="a-home" href="/">Home</a></li>
-              <li><a id="a-research" data-external=true href="https://dom.substack.com">Writing</a></li>
+              <li><a id="a-work" target=_self href="#work">Work</a></li>
+              <li><a id="a-projects" target=_self href="#projects">Projects</a></li>
+              <li><a id="a-talks" target=_self href="#talks">Talks</a></li>
+              <li><a id="a-writing" data-external=true href="https://dom.substack.com">Writing</a></li>
             </ul>
           </nav>
         </div>
