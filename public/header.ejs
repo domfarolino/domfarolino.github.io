@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <base target="_blank">
+    <base href="<%-base_href_value%>" target="_blank">
     <title>Dominic Farolino</title>
     <meta charset="utf-8">
     <meta name="author" content="Dominic Farolino">
@@ -36,7 +36,7 @@
       <div class="header-content">
         <h1 class="header-title"><a target=_self href=#>Dom Farolino</a></h1>
         <script>
-          const fonts = ['Retrofunk', /*'Basheq', 'Arshine',*/ 'DashHorizon'];
+          const fonts = ['Retrofunk', 'DashHorizon'];
           document.querySelector('h1').classList.add(fonts[Math.floor(Math.random() * 2)]);
         </script>
         <div class="nav-container">

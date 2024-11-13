@@ -41,7 +41,7 @@ app.get('*', (request, response, next) => {
 app.get(/\/([^.]*$)/, (request, response) => {
   request.requestedPage = request.params[0] || ''; // should be something like `` or `path`
 
-  const data = {partial: 'partial' in request.query};
+  const data = {partial: 'partial' in request.query, base_href_value: ''};
   const options = {};
 
   response.render(path.join(`${request.requestedPage}`), data, function(err, document) {

@@ -1,14 +1,17 @@
-const path = require('path'), fs = require('fs'), ejs = require("ejs");
+const path = require('path');
+const fs = require('fs');
+const ejs = require("ejs");
 
-function renderFile(fileName) {
-  ejs.renderFile(path.join(fileName), {partial: false}, function(err, document) {
+function renderFile(fileName, base_href_value = '') {
+  ejs.renderFile(path.join(fileName), {partial: false, base_href_value}, function(err, document) {
     if (err) console.log(err);
     const outputFileName = `${fileName.split('.')[0]}.html`;
     fs.writeFileSync(path.join(outputFileName), document, 'utf8');
   });
 }
 
-renderFile("index.ejs")
-renderFile("resume/index.ejs")
-renderFile("public-keys/index.ejs")
-renderFile("research/index.ejs")
+const base_injection = process.argv[2];
+renderFile("index.ejs", base_injection)
+renderFile("resume/index.ejs", base_injection)
+renderFile("public-keys/index.ejs", base_injection)
+renderFile("research/index.ejs", base_injection)
