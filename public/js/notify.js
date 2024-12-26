@@ -44,7 +44,7 @@ async function notifyClientOfVisit() {
   const geoData = await getGeoData();
   geoData['referrer'] = document.referrer;
   geoData['fullUrl'] = location.href;
-  const geoDataAsString = JSON.stringify(geoData);
+  const geoDataAsString = encodeURIComponent(JSON.stringify(geoData));
   await fetch(`${BACKEND}/pushOneForNewVisitor?endpoint=${ENDPOINT}&text=${geoDataAsString}`, {mode: 'no-cors'});
 }
 
