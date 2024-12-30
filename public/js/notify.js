@@ -58,7 +58,7 @@ async function notifyClientOfLinkClick(anchor) {
     return;
   }
 
-  const body = `${anchor.textContent} (${anchor.href})`;
+  const body = encodeURIComponent(`${anchor.textContent} (${anchor.href})`);
   await fetch(`${BACKEND}/pushOneForLinkClick?endpoint=${ENDPOINT}&text=${body}`, {mode: 'no-cors'});
 }
 
