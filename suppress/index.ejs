@@ -1,0 +1,23 @@
+<% if(partial == false) { %> <%- include('../header') %> <% } %>
+
+    <div view class="visible" id="view-suppress">
+      <div class="dom-card">
+        <noscript><h1>Script is disabled!! This page won't work</h1></noscript>
+        <h2>Suppress</h2>
+        <p id=status>Suppressed: </p>
+        <button id=suppress>Suppress notifications</button>
+        <button id=enable>Enable notifications</button>
+        <script>
+          const status = document.querySelector('#status');
+          suppress.onclick = () => {
+            localStorage.setItem("suppressPushNotifications", "true");
+          }
+          enable.onclick = () => {
+            localStorage.setItem("suppressPushNotifications", "false");
+          }
+          status.textContent += localStorage.suppressPushNotifications;
+        </script>
+      </div>
+    </div>
+
+<% if(partial == false) { %> <%- include('../footer') %> <% } %>
