@@ -3,7 +3,7 @@
   "short_name": "Dom Farolino",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#5F5E5E",
+  "background_color": "#195a28",
   "description": "Personal site for Dom Farolino",
   "icons": [{
     "src": "/imgs/favicon.png",
