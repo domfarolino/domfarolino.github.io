@@ -154,7 +154,6 @@ body.view-pending::after {
 
 .header > .header-content > .header-title.Retrofunk {
   font-family: Retrofunk;
-  letter-spacing: 3px;
 }
 .header > .header-content > .header-title.DashHorizon {
   font-family: DashHorizon;
