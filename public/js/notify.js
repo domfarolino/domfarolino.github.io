@@ -1,6 +1,8 @@
 // A non-sensitive endpoint that nominally represents the device that receives a
 // push notification.
-const BACKEND = `https://push-notifications-server.glitch.me`;
+const BACKEND = location.hostname === 'localhost'
+  ? 'http://localhost:8080'
+  : 'https://push-notifications-server.glitch.me';
 const ENDPOINT = `
 https://web.push.apple.com/QIwkGNb85F7sgoCewT06cUMwRZvF6QoTf2JeM-2F8zGpjmiD6shEsfi4hrjwg5Du6DPaYuiQoARgEPg-62QiBtQAJ7e-UR41EtUnPHXrTAjV8ffBoJ6yCHxzJCH53ylEYTeP_tQzGzscQ15wnT5ChhkEEpa5GrLy-VdsBdraMg4
 `;
@@ -31,6 +33,11 @@ async function getGeoData() {
     .then(response => response.json());
 }
 
+// Add this function to generate a unique session ID.
+function generateSessionId() {
+  return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+}
+
 async function notifyClientOfVisit() {
   // Don't do any notifying for bots.
   if (botCheck()) {
@@ -41,11 +48,15 @@ async function notifyClientOfVisit() {
     return;
   }
 
+  // Generate and store a new session ID for this visit.
+  const sessionId = generateSessionId();
+  localStorage.setItem('currentVisitSessionId', sessionId);
+
   const geoData = await getGeoData();
   geoData['referrer'] = document.referrer;
   geoData['fullUrl'] = location.href;
   const geoDataAsString = encodeURIComponent(JSON.stringify(geoData));
-  await fetch(`${BACKEND}/pushOneForNewVisitor?endpoint=${ENDPOINT}&text=${geoDataAsString}`, {mode: 'no-cors'});
+  await fetch(`${BACKEND}/pushOneForNewVisitor?endpoint=${ENDPOINT}&text=${geoDataAsString}&sessionId=${sessionId}`, {mode: 'no-cors'});
 }
 
 async function notifyClientOfLinkClick(anchor) {
@@ -58,8 +69,11 @@ async function notifyClientOfLinkClick(anchor) {
     return;
   }
 
-  const body = encodeURIComponent(`${anchor.textContent} (${anchor.href})`);
-  await fetch(`${BACKEND}/pushOneForLinkClick?endpoint=${ENDPOINT}&text=${body}`, {mode: 'no-cors'});
+  // Get the current session ID.
+  const sessionId = localStorage.getItem('currentVisitSessionId');
+
+  const text = encodeURIComponent(`${anchor.textContent} (${anchor.href})`);
+  await fetch(`${BACKEND}/pushOneForLinkClick?endpoint=${ENDPOINT}&text=${text}&sessionId=${sessionId}`, {mode: 'no-cors'});
 }
 
 (async function(){
