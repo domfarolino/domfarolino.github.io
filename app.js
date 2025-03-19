@@ -42,6 +42,14 @@ app.get(/\/([^.]*$)/, (request, response) => {
   request.requestedPage = request.params[0] || ''; // should be something like `` or `path`
 
   const data = {partial: 'partial' in request.query, base_href_value: '/'};
+  if (request.requestedPage === 'quotes') {
+    data.quotes = require('./public/quotes/quotes.js');
+    // TODO(domfarolino): This is needed for all hash quote navigations to work,
+    // but it breaks all hash links in the header, since they're being
+    // considered same-document even though they are really only relevant for
+    // the main/home page.
+    data.base_href_value = '/quotes';
+  }
   const options = {};
 
   response.render(path.join(`${request.requestedPage}`), data, function(err, document) {

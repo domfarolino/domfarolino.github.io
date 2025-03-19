@@ -1,0 +1,60 @@
+<% if(partial == false) { %> <%- include('../header') %> <% } %>
+
+    <style>
+      div.quote {
+        background: antiquewhite;
+        padding: 1px 15px;
+        scroll-margin-top: 245px;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+      div.quote > p {
+        font-size: 16px;
+      }
+      div.quote:target {
+        border: 4px solid rgb(25, 90, 40);
+        padding: 0px 11px;
+      }
+      a.quote-anchor {
+        display: block;
+        text-decoration: unset;
+        color: unset;
+        margin-bottom: 10px;
+      }
+    </style>
+    <!-- TODO: WHAT -->
+    <base href="/quotes" target="_self">
+    <div view class="visible" id="view-quotes">
+      <div class="dom-card">
+        <h2>Quotes</h2>
+        <p>A list of quotes that matter to me, some of which accompany the material through which I
+        became acquainted with the quote.</p>
+
+        <% for (const quote of quotes) { %>
+          <!--
+             Possible UX improvement: consider implementing something like
+             https://stackoverflow.com/a/77095425/3947332. Right now, the current UX always
+             navigates & scrolls when the user clicks a quote.
+
+             Arguably, a more optimal experience would be to perform the hash navigation on each
+             click and :target UI handling, but DO NOT scroll to the given quote UNLESS it is
+             actually out of the viewport (or partially out). This'd give the user a less jerky
+             experience when clicking around on any visible quotes. They'd have the agency to
+             manually scroll around to find more quotes, or click ones that are partially out of the
+             viewport to drag them back into view, but clicking on visible quotes would not jerk
+             their view around.
+
+             Unfortunately, this behavior cannot be achieved via pushState()/replaceState(), since
+             those methods specifically do not affect :target; see
+             https://github.com/whatwg/html/issues/639.
+          -->
+          <div onclick="location.href='#<%-quote.id%>'" id="<%-quote.id%>" class=quote>
+            <p><%-quote.quote%></p>
+            <p>— <a href="<%-quote.source%>"><em><%-quote.author%></em></a></p>
+          </div>
+
+        <% } %>
+      </div>
+    </div>
+
+<% if(partial == false) { %> <%- include('../footer') %> <% } %>
