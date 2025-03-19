@@ -7,7 +7,16 @@ const ejs = require("ejs");
 // made relative to `/resume/css/master.css`, but are essentially turned into
 // absolute URLs.
 function renderFile(fileName, base_href_value = '/') {
-  ejs.renderFile(path.join(fileName), {partial: false, base_href_value}, function(err, document) {
+  const data = {
+    partial: false,
+    base_href_value,
+  };
+
+  if (fileName === 'quotes/index.ejs') {
+    data.quotes = require('./public/quotes/quotes.js');
+  }
+
+  ejs.renderFile(path.join(fileName), data, function(err, document) {
     if (err) console.log(err);
     const outputFileName = `${fileName.split('.')[0]}.html`;
     fs.writeFileSync(path.join(outputFileName), document, 'utf8');
