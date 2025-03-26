@@ -65,6 +65,12 @@ module.exports = [
     "author": "Marcus Aurelius",
     "source": "https://www.goodreads.com/quotes/8054438-it-is-crazy-to-want-what-is-impossible-and-impossible"
   },
+  {
+    "id": "climate-doomer",
+    "quote": "There's a certain species of doomer environmentalist who talks about their dread of what climate change will do to us in such a way that you cannot possibly miss the intensity of their longing for that exact outcome.",
+    "author": "Freddie deBoar",
+    "source": "https://freddiedeboer.substack.com/p/ai-or-the-eternal-recurrence-of-hubris"
+  },
   // Experts.
   {
     "id": "science-is-the-belief",
@@ -204,13 +210,6 @@ module.exports = [
     "source": "https://www.goodreads.com/quotes/401-the-price-of-freedom-is-eternal-vigilance",
     "related": ["https://www.monticello.org/research-education/thomas-jefferson-encyclopedia/eternal-vigilance-price-liberty-spurious-quotation/"]
   },
-  {
-    "id": "climate-doomer",
-    "quote": "There's a certain species of doomer environmentalist who talks about their dread of what climate change will do to us in such a way that you cannot possibly miss the intensity of their longing for that exact outcome.",
-    "author": "Freddie deBoar",
-    "source": "https://freddiedeboer.substack.com/p/ai-or-the-eternal-recurrence-of-hubris"
-  },
-
   {
     "id": "studied-grace",
     "quote": "Studied grace is not grace.",
