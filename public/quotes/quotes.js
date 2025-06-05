@@ -227,5 +227,11 @@ module.exports = [
     "quote": "Somehow, hours of poor performance are required for moments of high performance.",
     "author": "Dominic Farolino",
     "source": "https://domfarolino.com"
+  },
+  {
+    "id": "when-goods",
+    "quote": "When goods don’t cross borders, soldiers will.",
+    "author": "Frederic Bastiat",
+    "source": "https://fee.org/resources/if-goods-dont-cross-borders/"
   }
 ];
