@@ -1,0 +1,105 @@
+ <!doctype html>
+<html>
+  <head>
+    <base href="/" target="_blank">
+    <title>Dominic Farolino</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Dominic Farolino">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="theme-color" content="#5F5E5E">
+    <meta name="google-site-verification" content="SYjTdRbFI3zdmErrPFC3hPBRfH_cUWbUYW8456P_vlc">
+
+    <script>
+      var host = "domfarolino.com";
+      if ((host == window.location.host) && (window.location.protocol != "https:")) window.location.protocol = "https";
+    </script>
+
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@DomFarolino">
+    <meta name="twitter:title" content="Dominic Farolino Personal Site">
+    <meta name="twitter:description" content="Personal site for Dom Farolino">
+    <meta name="twitter:image" content="https://domfarolino.com/imgs/box@192.png">
+    <meta name="twitter:image:alt" content="Logo">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/imgs/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Dom Farolino">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="/imgs/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/imgs/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="/imgs/favicon.svg">
+    <link rel="shortcut icon" href="/imgs/favicon.ico">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Roboto">
+    <link rel="stylesheet" href="css/master.css" media="screen">
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-content">
+        <h1 class="header-title"><a target=_self href=#>Dom Farolino</a></h1>
+        <script>
+          const fonts = ['Retrofunk', 'DashHorizon'];
+          document.querySelector('h1').classList.add(fonts[Math.floor(Math.random() * 2)]);
+        </script>
+        <div class="nav-container">
+          <input id="menu-toggle" type="checkbox" class="menu-toggle">
+          <label class="menu-toggle-label" for="menu-toggle"></label>
+          <nav>
+            <ul>
+              <li><a id="a-work" target=_self href="#work">Work</a></li>
+              <li><a id="a-projects" target=_self href="#projects">Projects</a></li>
+              <li><a id="a-talks" target=_self href="#talks">Talks</a></li>
+              <li><a id="a-writing" data-external=true href="https://dom.substack.com">Writing</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <section class="view-content visible">
+ 
+
+    <div view class="visible" id="view-research">
+      <div class="dom-card">
+        <h2>Research</h2>
+        <p>Coming soon.</p>
+      </div>
+    </div>
+
+ 
+    </section>
+
+    <!--<script src="js/app.js" async defer></script>-->
+
+    <!-- As per https://support.google.com/analytics/answer/9744165, we should not remove
+    `analytics.js` even though we have upgraded to `gtag` -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-84253715-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7MESQ8G0DK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7MESQ8G0DK');
+    </script>
+    <script src="js/notify.js"></script>
+    <script>
+      Array.from(document.querySelectorAll('a')).forEach(a => {
+        a.addEventListener('click', e => notifyClientOfLinkClick(a));
+      });
+    </script>
+  </body>
+</html>
+ 
