@@ -4,7 +4,7 @@ const BACKEND = location.hostname === 'localhost'
   ? 'http://localhost:8080'
   : 'https://push-notifications-server.glitch.me';
 const ENDPOINT = `
-https://web.push.apple.com/QIwkGNb85F7sgoCewT06cUMwRZvF6QoTf2JeM-2F8zGpjmiD6shEsfi4hrjwg5Du6DPaYuiQoARgEPg-62QiBtQAJ7e-UR41EtUnPHXrTAjV8ffBoJ6yCHxzJCH53ylEYTeP_tQzGzscQ15wnT5ChhkEEpa5GrLy-VdsBdraMg4
+https://web.push.apple.com/QDw8vQGlpPSkOlnLGD6JsfVfjoTG77p__pmjwUHgvoxssayN-uNIRrm5z-qScTjhA6I33OtdFgn-U0f14h7VmLX7cw0a6vQiWGMdNZTURlRddGulgnKiWblHNGM5ONdiQ5sbeQq-HJM1nNbDThRPhW0LRMh7OmccuGe_jvRB990
 `;
 
 // Probably this is a common function, but I first saw it on
