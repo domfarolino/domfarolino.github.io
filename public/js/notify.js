@@ -2,7 +2,7 @@
 // push notification.
 const BACKEND = location.hostname === 'localhost'
   ? 'http://localhost:8080'
-  : 'https://push-notifications-server.glitch.me';
+  : 'https://push-notifications-personal-uc8qd.ondigitalocean.app';
 const ENDPOINT = `
 https://web.push.apple.com/QDw8vQGlpPSkOlnLGD6JsfVfjoTG77p__pmjwUHgvoxssayN-uNIRrm5z-qScTjhA6I33OtdFgn-U0f14h7VmLX7cw0a6vQiWGMdNZTURlRddGulgnKiWblHNGM5ONdiQ5sbeQq-HJM1nNbDThRPhW0LRMh7OmccuGe_jvRB990
 `;
