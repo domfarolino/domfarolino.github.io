@@ -48,9 +48,12 @@ async function notifyClientOfVisit() {
     return;
   }
 
-  // Generate and store a new session ID for this visit.
-  const sessionId = generateSessionId();
-  localStorage.setItem('currentVisitSessionId', sessionId);
+  // Get or generate a sticky session ID that persists across page loads.
+  let sessionId = localStorage.getItem('currentVisitSessionId');
+  if (!sessionId) {
+    sessionId = generateSessionId();
+    localStorage.setItem('currentVisitSessionId', sessionId);
+  }
 
   const geoData = await getGeoData();
   geoData['referrer'] = document.referrer;
