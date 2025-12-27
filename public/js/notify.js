@@ -1,11 +1,8 @@
 // A non-sensitive endpoint that nominally represents the device that receives a
 // push notification.
 const BACKEND = location.hostname === 'localhost'
-  ? 'http://localhost:8080'
-  : 'https://push-notifications-personal-uc8qd.ondigitalocean.app';
-const ENDPOINT = `
-https://web.push.apple.com/QDw8vQGlpPSkOlnLGD6JsfVfjoTG77p__pmjwUHgvoxssayN-uNIRrm5z-qScTjhA6I33OtdFgn-U0f14h7VmLX7cw0a6vQiWGMdNZTURlRddGulgnKiWblHNGM5ONdiQ5sbeQq-HJM1nNbDThRPhW0LRMh7OmccuGe_jvRB990
-`;
+  ? 'http://localhost:3001/api'
+  : 'https://linklytics.co/api';
 
 // Probably this is a common function, but I first saw it on
 // https://github.com/matteosandrin/personal-website/blob/master/public/assets/js/notify.js#L1C1-L11.
@@ -55,11 +52,11 @@ async function notifyClientOfVisit() {
     localStorage.setItem('currentVisitSessionId', sessionId);
   }
 
-  const geoData = await getGeoData();
-  geoData['referrer'] = document.referrer;
-  geoData['fullUrl'] = location.href;
-  const geoDataAsString = encodeURIComponent(JSON.stringify(geoData));
-  await fetch(`${BACKEND}/pushOneForNewVisitor?endpoint=${ENDPOINT}&text=${geoDataAsString}&sessionId=${sessionId}`, {mode: 'no-cors'});
+  const body = await getGeoData();
+  body['referrer'] = document.referrer;
+  body['fullUrl'] = location.href;
+  body['sessionId'] = sessionId;
+  await fetch(`${BACKEND}/recordNewVisit`, {method: 'POST', body: new URLSearchParams(body)});
 }
 
 async function notifyClientOfLinkClick(anchor) {
@@ -73,10 +70,12 @@ async function notifyClientOfLinkClick(anchor) {
   }
 
   // Get the current session ID.
-  const sessionId = localStorage.getItem('currentVisitSessionId');
+  const body = {
+    sessionId: localStorage.getItem('currentVisitSessionId'),
+    text: `${anchor.textContent} (${anchor.href})`,
+  };
 
-  const text = encodeURIComponent(`${anchor.textContent} (${anchor.href})`);
-  await fetch(`${BACKEND}/pushOneForLinkClick?endpoint=${ENDPOINT}&text=${text}&sessionId=${sessionId}`, {mode: 'no-cors'});
+  await fetch(`${BACKEND}/recordLinkClick`, {method: 'POST', body: new URLSearchParams(body)});
 }
 
 (async function(){
