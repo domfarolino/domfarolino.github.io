@@ -45,14 +45,23 @@ async function notifyClientOfVisit() {
     return;
   }
 
+
   // Generate and store a new session ID for this visit.
   const sessionId = generateSessionId();
   localStorage.setItem('currentVisitSessionId', sessionId);
+
+  // Generate or restore a new "sticky" session ID for this visit.
+  let stickySessionId = localStorage.getItem('stickySessionId');
+  if (!stickySessionId) {
+    stickySessionId = sessionId + '_sticky';
+    localStorage.setItem('stickySessionId', stickySessionId);
+  }
 
   const body = await getGeoData();
   body['referrer'] = document.referrer;
   body['fullUrl'] = location.href;
   body['sessionId'] = sessionId;
+  body['stickySessionId'] = stickySessionId;
   await fetch(`${BACKEND}/recordNewVisit`, {method: 'POST', body: new URLSearchParams(body)});
 }
 
