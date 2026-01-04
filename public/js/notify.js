@@ -60,6 +60,7 @@ async function notifyClientOfVisit() {
   const body = await getGeoData();
   body['referrer'] = document.referrer;
   body['fullUrl'] = location.href;
+  body['scriptTagId'] = '8d12bef6-a7cf-4738-a8d3-96d2fe94c698';
   body['sessionId'] = sessionId;
   body['stickySessionId'] = stickySessionId;
   await fetch(`${BACKEND}/recordNewVisit`, {method: 'POST', body: new URLSearchParams(body)});
