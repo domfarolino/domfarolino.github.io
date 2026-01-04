@@ -1,0 +1,150 @@
+<% if(partial == false) { %> <%- include('./header') %> <% } %>
+
+    <div view class="visible" id="view-home">
+      <div class="dom-card">
+        <div id=about>
+          <div>
+            <h2 id=about>About</h2>
+            <p>
+              I'm Dom, a software engineer at
+              <span style="color: #4285F4">G</span><span style="color: #DB4437">o</span><span style="color: #F4B400">o</span><span style="color: #4285F4">g</span><span style="color: #0F9D58">l</span><span style="color: #DB4437">e</span>
+              on the Chrome team in Boston. I'm from Ohio, used to live in Tokyo, and love to travel the world.
+            </p>
+            <p>I went to the University of Cincinnati, and I'm interested in the Web platform &amp; computer science theory/algorithms.</p>
+            <p>I used to participate in competitive programming contests, and love graph theory and combinatorics.</p>
+            <p>
+              You can reach me by
+              <a href=mailto:domfarolino@gmail.com>email</a>,
+              <a href=https://github.com/domfarolino/>GitHub</a>,
+              <a href=https://www.linkedin.com/in/domfarolino/>LinkedIn</a>,
+              <a href=https://twitter.com/domfarolino/>Twitter</a>,
+              or <a href=https://instagram.com/domfarolino/>Instagram</a>.
+            </p>
+          </div>
+          <div>
+            <img src=imgs/dombike.jpeg>
+          </div>
+        </div>
+      </div>
+      <div class="dom-card">
+        <h2 id=work>Web platform work</h2>
+        <p>
+          I'm a Chromium <a href="https://en.wikipedia.org/wiki/Blink_(browser_engine)">Blink</a> owner
+          and <a href=https://chromium.googlesource.com/chromium/src/+/master/docs/security/ipc-reviews.md>IPC</a>
+          security owner, member of the <a href=https://github.com/whatwg/>WHATWG</a> standards organization,
+          and editor of the <a href=https://html.spec.whatwg.org/multipage/>HTML Standard</a>. I mostly work on
+          DOM APIs 😆, resource loading, scheduling &amp; IPC architecture, and
+          <a href=https://privacysandbox.com/>privacy-preserving APIs</a> for ads
+          (<a href=https://docs.google.com/document/d/1HAU9IiHZU4KBPC_rEk3BQYrWTK50PdNGg8CcHhVLXig/edit>design doc</a>).
+          See my Chromium contributions <a
+          href=https://chromium-review.googlesource.com/q/owner:dom%2540chromium.org>here</a>.
+        </p>
+        <details>
+          <summary>Click to expand internship details</summary>
+          <p>
+            In 2019, I interned on the Chrome loading team in Tokyo, after contributing to Chromium for ~1.5 years during college.
+            That summer I shipped subresource integrity support for link preloads
+            (<a href=https://docs.google.com/document/d/1l8y_T3z-nb0smR9EVoZ3TeEI6rGzLw74vvzWzODsnDQ/edit>design doc</a>),
+            and worked on enabling cross-origin prefetch in a privacy-preserving manner, with Chromium's double-keyed HTTP cache
+            (<a
+            href=https://docs.google.com/document/d/1bKGDIePAuF6YXmmrwM33LeLvtuCsla3vTspsxsNp-f8/edit>design doc</a>).
+          </p>
+          <p>
+            Before that, I interned at Microsoft in 2018, and Mozilla in 2017, in Mountain View,
+            CA on the Firefox graphics team where I helped implement off-main-thread painting.
+          </p>
+        </details>
+      </div>
+      <div class="dom-card">
+        <h2 id=projects>Projects</h2>
+        <p>
+          My personal projects are <a href=https://github.com/domfarolino/>on GitHub</a>, where I maintain an
+          <a href=https://github.com/domfarolino/algorithms/>algorithms</a> repository providing detailed explanations
+          &amp; implementations of classic algorithms, data structures, and competitive programming problems.
+          I'm also writing a small <a href=https://github.com/domfarolino/mage>IPC library</a> called
+          Mage, and <a href=https://dom.substack.com>writing technical articles</a>.
+        </p>
+        <p>More notable projects</p>
+        <ul id=project-list>
+          <li><p><a href=https://domfarolino.com/push-notifications>🔔 Web push notifications demo</a></p></li>
+          <li><p><a href=https://domfarolino.com/japanese-practice-time>🌸 Japanese Practice Time</a></p></li>
+          <li><p><a href=https://gh-pages.glitch.me>👀 GitHub Pages Viewer</a></p></li>
+          <li><p><a href=https://github.com/domfarolino/mage>🧙‍♂️ Mage IPC library</a></p></li>
+          <li><p><a href=https://github.com/domfarolino/base>🧱 <code style="font-size: 16px;">//base</code> library</a></p></li>
+          <li><p><a href=https://github.com/domfarolino/algorithms>💎 Algorithms</a></p></li>
+          <li><p><a href=https://domfarolino.com/svg-editor>✏️ SVG editor</a></p></li>
+          <li><p><a href=https://github.com/domfarolino/specfmt>✍️ specfmt</a></p></li>
+          <li><p><a style="color: #413c38;" href=https://blog.domfarolino.com>Old blog</a></p></li>
+          <li><p><a style="color: #413c38;" href=https://github.com/domfarolino/angular2-login-seed>Angular 2 login seed</a></p></li>
+        </ul>
+      </div>
+       <div class="dom-card">
+        <h2 id=talks>Talks</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td><p><b>Dec 2024</b></p></td>
+              <td><p><a href="https://www.youtube.com/watch?v=IMIVmCkwOT4">Tech Stack Nation — The Web's new Observable API</a></p></td>
+            </tr>
+            <tr>
+              <td><p><b>Jun 2024</b></p></td>
+              <td><p><a href="https://www.youtube.com/watch?v=AUYAfayMUl0">CascadiaJS — Modern Event Handling: A Peek at the New Observable API</a></p></td>
+            </tr>
+            <tr>
+              <td><p><b>Jun 2024</b></p></td>
+              <td><p><a href="https://www.youtube.com/watch?v=W86aEcGKn2k">Modern Web Podcast — Observables: Coming to a Browser Near You</a></p></td>
+            </tr>
+            <tr>
+              <td><p><b>May 2022</b></p></td>
+              <td><p><a href="https://youtu.be/NGRqRMpMWSM?t=122">BlinkOn 16 lightning talk — Debugging Chromium with LLDB</a></p></td>
+            </tr>
+            <tr>
+              <td><p><b>May 2022</b></p></td>
+              <td><p><a href="https://www.youtube.com/watch?v=hJ2UDBXZeF8">BlinkOn 16 - Fenced Frames Progress</a></p></td>
+            </tr>
+            <tr>
+              <td><p><b>Nov 2021</b></p></td>
+              <td><p><a href="https://youtu.be/-P_WMKaIhfA?t=1476">BlinkOn 15 lightning talk — Referrers and Redirects</a></p></td>
+            </tr>
+            <tr>
+              <td><p><b>Jul 2021</b></p></td>
+              <td><p><a href="https://www.youtube.com/watch?v=pqDk1cj30JA">Cross-Origin Referrer Redaction</a></p></td>
+            </tr>
+            <tr>
+              <td><p><b>May 2021</b></p></td>
+              <td><p><a href="https://www.youtube.com/watch?v=CqbluZHZofI">BlinkOn 14 - Fenced Frames Architecture</a></p></td>
+            </tr>
+            <tr>
+              <td><p><b>Sep 2019</b></p></td>
+              <td><p><a href="https://www.youtube.com/watch?v=BGHY9kj6xtg">Google Chrome Internship Presentation</a></p></td>
+            </tr>
+            <tr>
+              <td><p><b>Nov 2018</b></p></td>
+              <td><p><a href="https://www.youtube.com/watch?v=z2SbknMWtp0">CascadiaJS - Hitchhiker's Guide to Web Standards</a></p></td>
+            </tr>
+            <tr>
+              <td><p><b>Nov 2018</b></p></td>
+              <td><p><a href="https://www.youtube.com/watch?v=X9aVFr21P_E">Modern Web Podcast - Browser Standards</a></p></td>
+            </tr>
+            <tr>
+              <td><p><b>Aug 2018</b></p></td>
+              <td><p><a href="https://docs.google.com/presentation/d/1iO2tgqr9Tg1gzuV1AgZ-7fxXpVbdWJsKC0hPDvVSnd4/edit?usp=sharing">Modern Web Meetup - Demystifying Web Standards</a></p></td>
+            </tr>
+            <tr>
+              <td><p><b>Aug 2018</b></p></td>
+              <td><p><a href="https://www.youtube.com/watch?v=kRPYg9hzEZQ">Browser Contributor Days - Google Sunnyvale</a></p></td>
+            </tr>
+            <tr>
+              <td><p><b>Aug 2017</b></p></td>
+              <td><p><a href="https://air.mozilla.org/intern-presentations-round-2-thursday-august-1st/#@30m0s">Mozilla Intern Presentation - Off-Main-Thread Painting</a></p></td>
+            </tr>
+            <tr>
+              <td><p><b>Feb 2017</b></p></td>
+              <td><p><a href="https://youtu.be/FXAOGZ3Gw4U?t=53s">Node Cincy Progressive Web App</a></p></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+<% if(partial == false) { %> <%- include('./footer') %> <% } %>
