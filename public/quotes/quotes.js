@@ -222,12 +222,14 @@ module.exports = [
     "author": "Blaise Pascal",
     "source": "https://www.goodreads.com/quotes/801132-there-is-a-god-shaped-vacuum-in-the-heart-of-each"
   },
+  /*
   {
     "id": "high-performance",
     "quote": "Somehow, hours of poor performance are required for moments of high performance.",
     "author": "Dominic Farolino",
     "source": "https://domfarolino.com"
   },
+  */
   {
     "id": "when-goods",
     "quote": "When goods don’t cross borders, soldiers will.",
