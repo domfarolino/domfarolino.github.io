@@ -28,6 +28,12 @@ module.exports = [
     "source": "https://www.goodreads.com/quotes/66643-he-who-knows-only-his-own-side-of-the-case"
   },
   {
+    "id": "you-cannot-reason",
+    "quote": "You cannot reason a person out of a position he did not reason himself into in the first place.",
+    "author": "Jonathan Swift",
+    "source": "https://www.goodreads.com/quotes/9838985-you-cannot-reason-a-person-out-of-a-position-he"
+  },
+  {
     "id": "nietzsche-change-our-mind",
     "quote": "When we have to change our mind about a person, we hold the inconvenience he causes us very much against him.",
     "author": "Friedrich Nietzsche",
