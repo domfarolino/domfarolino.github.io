@@ -222,6 +222,12 @@ module.exports = [
     "author": "Blaise Pascal",
     "source": "https://www.goodreads.com/quotes/801132-there-is-a-god-shaped-vacuum-in-the-heart-of-each"
   },
+  { 
+    "id": "for-what-will-it-profit",
+    "quote": "For what will it profit a man if he gains the whole world and forfeits his soul?",
+    "author": "Matthew 16:26",
+    "source": "https://www.biblegateway.com/passage/?search=Matthew%2016%3A25-27&version=ESV#:~:text=For%20what%20will%20it%20profit%20a%20man%20if%20he%20gains%20the%20whole%20world%20and%20forfeits%20his%20soul%3F"
+  },
   /*
   {
     "id": "high-performance",
