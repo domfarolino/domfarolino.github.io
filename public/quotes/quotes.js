@@ -259,5 +259,11 @@ module.exports = [
     "quote": "[...] every now and then the energy of a whole generation comes to a head in a long fine flash, for reasons that nobody really understands at the time—and which never explain, in retrospect, what actually happened.",
     "author": "Hunter S. Thompson",
     "source": "https://www.goodreads.com/quotes/1074-strange-memories-on-this-nervous-night-in-las-vegas-five"
-  }
+  },
+  {
+    "id": "idle-man",
+    "quote": "If you ask one of them as he comes out of a house, 'Where are you going? What do you have in mind?' he will reply, 'I really don't know; but I'll see some people, I'll do something.' They wander around aimlessly looking for employment, and they do not what they intended but what they happen to run across. Their roaming is idle and pointless, like ants crawling over bushes, which purposelessly make their way right up to the topmost branch and then all the way down again. Many people live a life like these creatures, and you could not unjustly call it busy idleness.",
+    "author": "Lucius Annaeus Seneca",
+    "source": "https://www.artofmanliness.com/character/self-improvement/what-do-you-want-to-want/#:~:text=If%20you%20ask,it%20busy%20idleness."
+  },
 ];
