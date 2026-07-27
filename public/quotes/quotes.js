@@ -228,6 +228,12 @@ module.exports = [
     "author": "Blaise Pascal",
     "source": "https://www.goodreads.com/quotes/801132-there-is-a-god-shaped-vacuum-in-the-heart-of-each"
   },
+  {
+    "id": "happiness",
+    "quote": "If you make happiness your goal in life, you're going to be unhappy.",
+    "author": "Paul Pusateri",
+    "source": "https://milliganpusateri.com/staff/paul-pusateri/"
+  },
   { 
     "id": "for-what-will-it-profit",
     "quote": "For what will it profit a man if he gains the whole world and forfeits his soul?",
