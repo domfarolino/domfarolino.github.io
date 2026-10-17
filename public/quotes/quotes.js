@@ -266,4 +266,10 @@ module.exports = [
     "author": "Lucius Annaeus Seneca",
     "source": "https://www.artofmanliness.com/character/self-improvement/what-do-you-want-to-want/#:~:text=If%20you%20ask,it%20busy%20idleness."
   },
+  {
+    "id": "watches-and-time",
+    "quote": "You have the watches, but we have the time.",
+    "author": "Taliban (origin uncertain)",
+    "source": "https://english.stackexchange.com/questions/566289/you-have-the-watches-but-we-have-the-time"
+  },
 ];
