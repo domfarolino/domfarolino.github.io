@@ -1,0 +1,25 @@
+{
+  "name": "Dom Farolino",
+  "short_name": "Dom Farolino",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#195a28",
+  "description": "Personal site for Dom Farolino",
+  "icons": [{
+    "src": "/imgs/favicon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  },
+  {
+    "src": "/imgs/favicon-192x192.png",
+    "sizes": "192x192",
+    "type": "image/png",
+    "purpose": "maskable"
+  },
+  {
+    "src": "/imgs/favicon-512x512.png",
+    "sizes": "512x512",
+    "type": "image/png",
+    "purpose": "maskable"
+  }]
+}
