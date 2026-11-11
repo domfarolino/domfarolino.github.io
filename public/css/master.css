@@ -146,6 +146,7 @@ body.view-pending::after {
 
 .header > .header-content > .header-title {
   margin: 0px auto 0px 0px;
+  white-space: nowrap;
 
   /* Default values */
   font-family: Retrofunk;
@@ -235,7 +236,7 @@ body.view-pending::after {
 
   .header > .header-content > .header-title.DashHorizon {
     letter-spacing: 0px;
-    font-size: 45px;
+    font-size: 40px;
   }
 }
 
