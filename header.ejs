@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <base href="<%-base_href_value%>" target="_blank">
+    <title>Dominic Farolino</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Dominic Farolino">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="theme-color" content="#5F5E5E">
+    <meta name="google-site-verification" content="SYjTdRbFI3zdmErrPFC3hPBRfH_cUWbUYW8456P_vlc">
+
+    <script>
+      var host = "domfarolino.com";
+      if ((host == window.location.host) && (window.location.protocol != "https:")) window.location.protocol = "https";
+    </script>
+
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@DomFarolino">
+    <meta name="twitter:title" content="Dominic Farolino Personal Site">
+    <meta name="twitter:description" content="Personal site for Dom Farolino">
+    <meta name="twitter:image" content="https://domfarolino.com/imgs/box@192.png">
+    <meta name="twitter:image:alt" content="Logo">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/imgs/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Dom Farolino">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="/imgs/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/imgs/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="/imgs/favicon.svg">
+    <link rel="shortcut icon" href="/imgs/favicon.ico">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Roboto">
+    <link rel="stylesheet" href="css/master.css" media="screen">
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-content">
+        <h1 class="header-title"><a target=_self href=#>Dom Farolino</a></h1>
+        <script>
+          const fonts = ['Retrofunk', 'DashHorizon'];
+          document.querySelector('h1').classList.add(fonts[Math.floor(Math.random() * 2)]);
+        </script>
+        <div class="nav-container">
+          <input id="menu-toggle" type="checkbox" class="menu-toggle">
+          <label class="menu-toggle-label" for="menu-toggle"></label>
+          <nav>
+            <ul>
+              <li><a id="a-work" target=_self href="#work">Work</a></li>
+              <li><a id="a-projects" target=_self href="#projects">Projects</a></li>
+              <li><a id="a-talks" target=_self href="#talks">Talks</a></li>
+              <li><a id="a-writing" data-external=true href="https://dom.substack.com">Writing</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <section class="view-content visible">
